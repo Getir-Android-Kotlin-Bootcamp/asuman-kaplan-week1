@@ -1,15 +1,4 @@
-package com.example.hafta1_odev
-
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-
-class Main : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
-
-    fun main() {
+        fun main() {
         // Page-9
         println("Page-9")
         println("Hi Kotlin!")
@@ -126,6 +115,22 @@ class Main : AppCompatActivity() {
 
         // Page-22
 
+        //Page-37-38
+        println("Page-37-38")
+        val book = Book("1984", "George Orwell", 1949, 328)
+        book.read()
+        book.printDetails()
+
+        // Page-39
+        println("Page-39")
+        val numbers2 = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+        val oddNumbers = numbers2.filter { it % 2 != 0 }
+        println("Odd numbers: $oddNumbers")
+
+        // Page-40
+        println("Page-40")
+
+
 
 
 
@@ -176,6 +181,24 @@ class Main : AppCompatActivity() {
             else -> println("Unknown value type")
         }
     }
+    // top of page-37-38
+    data class Book(
+        val title: String,
+        val author: String,
+        val publicationYear: Int,
+        val pageCount: Int
+    ) {
+        fun read() {
+            println("You are now reading: $title")
+        }
+
+        fun printDetails() {
+            println("Title: $title")
+            println("Author: $author")
+            println("Publication Year: $publicationYear")
+            println("Page Count: $pageCount")
+        }
+    }
     //
 
 
@@ -187,6 +210,6 @@ class Main : AppCompatActivity() {
 
 
 
-}
+
 
 
